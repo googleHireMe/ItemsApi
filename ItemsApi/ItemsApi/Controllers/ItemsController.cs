@@ -47,6 +47,7 @@ namespace ItemsApi.Controllers
         {
             try
             {
+                repository.UpdateItem(value);
                 return NoContent();
             }
             catch (Exception)

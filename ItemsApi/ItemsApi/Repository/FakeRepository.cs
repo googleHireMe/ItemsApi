@@ -20,7 +20,7 @@ namespace ItemsApi.Repository
 
         public Item CreateItem(Item item)
         {
-            item.Id = items.OrderByDescending(i => i.Id).First().Id;
+            item.Id = items.OrderByDescending(i => i.Id).First().Id + 1;
             items.Add(item);
             return item;
         }
